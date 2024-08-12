@@ -82,8 +82,8 @@ const ShowModal = ({
           theatre: selectedTheatre._id,
         });
       }
-      // if (response.status = "success") {
-        if (response.success === true) {
+      if (response.status = "success") {
+        // if (response.success === true) {
         
         getData();
         message.success(response.message);
@@ -106,8 +106,8 @@ const ShowModal = ({
     try {
       dispatch(ShowLoading());
       const response = await deleteShow({ showId: showId });
-      // if (response.status = "success") {
-        if (response.success === true) {
+      if (response.status = "success") {
+        // if (response.success === true) {
         message.success(response.message);
         getData();
       } else {
