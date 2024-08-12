@@ -12,7 +12,7 @@ function Forget() {
     try {
       const response = await ForgetPassword(values);
       // if (response.success === true) {
-      if (response.status === "success") {
+      if (response.success === true) {
         message.success(response.message);
         alert("OTP sent to your email");
         // window.location.href = "/reset";

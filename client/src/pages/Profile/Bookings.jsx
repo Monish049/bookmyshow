@@ -15,7 +15,7 @@ const Bookings = () => {
       dispatch(ShowLoading());
       const response = await getAllBookings();
       console.log(response)
-      if (response.status === "success") {
+      if (response.success === true) {
         // if (response.success === true) {
         setBookings(response.data);
         console.log(response.data);

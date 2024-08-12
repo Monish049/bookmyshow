@@ -22,7 +22,7 @@ const BookShow = () => {
     try {
       dispatch(ShowLoading()); // Dispatching action to show loading state
       const response = await getShowById({ showId: params.id }); // API call to fetch show details
-      // if (response.status === "success") {
+      // if (response.success === true) {
         if (response.success === true) {
         setShow(response.data); // Setting state with fetched show data
         // message.success(response.message); // Optional success message
@@ -122,7 +122,7 @@ const BookShow = () => {
       token,
       selectedSeats.length * show.ticketPrice
     );
-    if (response.status === "success") {
+    if (response.success === true) {
       message.success(response.message);
       book(response.data);
       console.log(response);
@@ -141,7 +141,7 @@ const BookShow = () => {
         seats: selectedSeats,
         user: user._id,
       });
-      if (response.status === "success") {
+      if (response.success === true) {
         message.success(response.message);
         navigate("/profile");
       } else {

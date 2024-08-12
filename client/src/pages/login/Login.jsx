@@ -12,7 +12,7 @@ function Login() {
     try {
       const response = await LoginUser(values);
       // console.log(response)
-      if (response.status === "success") {
+      if (response.success === true) {
       // if (response.success === true) {
 
         message.success(response.message);
