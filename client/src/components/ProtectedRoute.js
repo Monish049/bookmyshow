@@ -65,11 +65,12 @@ function ProtectedRoute({ children }) {
     try {
       dispatch(ShowLoading());
       const response = await GetCurrentUser();
+      if (response!=undefined){
       console.log(response);
 
       dispatch(SetUser(response.data));
       dispatch(HideLoading());
-    } catch (error) {
+    }} catch (error) {
       dispatch(SetUser(null));
       message.error(error.message);
     }

@@ -18,7 +18,7 @@ console.log(clientBuildPath);
 app.use(express.static(clientBuildPath)); // 8081 -> localhost:8081 -> index,html
 app.use(
     cors({
-        origin: ["http://localhost:3000","https://ticket-booking-webservice.onrender.com"],
+        origin: ["http://localhost:3000","https://movie-ticket-booking-sb9j.onrender.com"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
         credentials: true,
