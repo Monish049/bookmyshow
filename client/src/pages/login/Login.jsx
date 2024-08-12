@@ -11,10 +11,8 @@ function Login() {
     // console.log(values);
     try {
       const response = await LoginUser(values);
-      // console.log(response)
+      console.log(response)
       if (response.success === true) {
-      // if (response.success === true) {
-
         message.success(response.message);
         localStorage.setItem("token", response.data);
         
@@ -24,6 +22,7 @@ function Login() {
       }
     } catch (err) {
       console.log(err);
+      message.error("Please reload and try again")
     }
   };
 

@@ -44,7 +44,8 @@ const ShowModal = ({
     try {
       dispatch(ShowLoading());
       const movieResponse = await getAllMovies();
-      if (movieResponse.status === "success") {
+      // if (movieResponse.status === "success") {
+      if (movieResponse.success === true) {
         setMovies(movieResponse.data);
       } else {
         message.success(movieResponse.message);
@@ -53,8 +54,8 @@ const ShowModal = ({
       const showResponse = await getShowsByTheatre({
         theatreId: selectedTheatre._id,
       });
-      if (showResponse.status === "success") {
-        // if (showResponse.success === true) {
+      // if (showResponse.status === "success") {
+        if (showResponse.success === true) {
         setShows(showResponse.data);
       } else {
         message.success(showResponse.message);

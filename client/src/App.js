@@ -20,8 +20,8 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-            <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             {/* <Route path="/" element={<Home />} /> */}
             <Route path="/login" element={<Login />}></Route>
 
