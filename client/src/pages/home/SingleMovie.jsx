@@ -24,7 +24,7 @@ const SingleMovie = () => {
     try {
       dispatch(ShowLoading());
       const response = await getMovieById(params.id);
-      if (response.status = "success") {
+      if (response.status === "success") {
         // if (response.success === true) {
         setMovie(response.data);
       } else {
@@ -43,7 +43,7 @@ const SingleMovie = () => {
       const response = await getAllTheatresByMovie({ movie: params.id, date });
       console.log(response)
       // if (response.success === true) {
-      if (response.status = "success") {
+      if (response.status === "success") {
         setTheatres(response.data);
       } else {
         message.success(response.message);

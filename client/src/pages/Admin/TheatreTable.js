@@ -12,7 +12,7 @@ const TheatresTable = () => {
     try {
       dispatch(ShowLoading());
       const response = await getAllTheatresForAdmin();
-      if (response.status = "success") {
+      if (response.status === "success") {
         const allTheatres = response.data;
         setTheatres(
           allTheatres.map(function (item) {
@@ -39,7 +39,7 @@ const TheatresTable = () => {
       };
       const response = await updateTheatre(values);
       console.log(response, theatre);
-      if (response.status = "success") {
+      if (response.status === "success") {
         message.success(response.message);
         getData();
       }

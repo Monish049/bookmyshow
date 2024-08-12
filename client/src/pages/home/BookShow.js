@@ -122,7 +122,7 @@ const BookShow = () => {
       token,
       selectedSeats.length * show.ticketPrice
     );
-    if (response.status = "success") {
+    if (response.status === "success") {
       message.success(response.message);
       book(response.data);
       console.log(response);
@@ -141,7 +141,7 @@ const BookShow = () => {
         seats: selectedSeats,
         user: user._id,
       });
-      if (response.status = "success") {
+      if (response.status === "success") {
         message.success(response.message);
         navigate("/profile");
       } else {
