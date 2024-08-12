@@ -73,6 +73,7 @@ function ProtectedRoute({ children }) {
     }} catch (error) {
       dispatch(SetUser(null));
       message.error(error.message);
+      message.error("Please reload and try again")
     }
   };
   useEffect(() => {
