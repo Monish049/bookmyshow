@@ -20,7 +20,7 @@ function ProtectedRoute({ children }) {
   const navItems = [
     { label: "Home", icon: <HomeOutlined /> },
     {
-      label: `${user ? user.name : ""}`,
+      label: "User",
       icon: <UserOutlined />,
       children: [
         {
