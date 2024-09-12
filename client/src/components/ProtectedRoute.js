@@ -65,12 +65,17 @@ function ProtectedRoute({ children }) {
     try {
       dispatch(ShowLoading());
       const response = await GetCurrentUser();
+      console.log(response)
       if (response!=undefined){
       console.log(response);
 
-      dispatch(SetUser(response.data));
+      dispatch(SetUser(response.data.name));
       dispatch(HideLoading());
     }} catch (error) {
+      console.log(error)
+      setTimeout(() => {
+        navigate("/home");
+      }, 1000);
       dispatch(SetUser(null));
       message.error(error.message);
       message.error("Please reload and try again")
